@@ -1,0 +1,24 @@
+{
+  "name": "browserbox",
+  "version": "0.0.1",
+  "description": "Hijack a browser tab and use it for remote code execution. You know you want to.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HENRYMARTIN5/BrowserBox.git"
+  },
+  "author": "Henry Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HENRYMARTIN5/BrowserBox/issues"
+  },
+  "homepage": "https://github.com/HENRYMARTIN5/BrowserBox#readme",
+  "dependencies": {
+    "express": "^1.0.1",
+    "socket.io": "^4.5.1"
+  }
+}
