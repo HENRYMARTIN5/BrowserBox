@@ -8,6 +8,7 @@ const io = new Server(server);
 /////////// Config ///////////
 const Password = "Br0ws3rB0x";
 const Port = 3000;
+const Host = "localhost:3000";
 //////////////////////////////
 
 app.get('/', (req, res) => {
